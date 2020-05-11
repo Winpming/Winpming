@@ -1,0 +1,15 @@
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\bin\Debug\Project_WPM.exe.config
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\bin\Debug\Project_WPM.exe
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\bin\Debug\Project_WPM.pdb
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csprojAssemblyReference.cache
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\MainWindow.g.cs
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\App.g.cs
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM_MarkupCompile.cache
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM_MarkupCompile.lref
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\MainWindow.baml
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.g.resources
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.Properties.Resources.resources
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.GenerateResource.cache
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.CoreCompileInputs.cache
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.exe
+C:\Users\Eunsol\Desktop\Project_WPM\Project_WPM\obj\Debug\Project_WPM.pdb
