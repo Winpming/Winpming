@@ -5,14 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel
+        Title="MainWindow" Height="500" Width="700">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Resources/mainbackground.png" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <StackPanel x:Name="mainStackPanel"
         Margin="15">
-        
-        <ComboBox x:Name="account"
-                  SelectionChanged="account_SelectionChanged"
+            <ComboBox x:Name="account"
                   HorizontalAlignment="Left">
-                      
-        </ComboBox>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal" Margin="150,310,0,0">
+                <Button Content="계정생성" Margin="0,0,100,0" Width="130" Height="50" Background ="SeaGreen"/>
+                <Button Content="시작하기" Width="130" Height="50" Background="SeaGreen"/>
+            </StackPanel>
     </StackPanel>
+    </Grid>
 </Window>
