@@ -25,9 +25,5 @@ namespace Project_WPM
             InitializeComponent();
         }
 
-        private void account_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }
