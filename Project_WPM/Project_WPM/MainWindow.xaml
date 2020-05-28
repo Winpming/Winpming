@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="third"/>
-    </Grid>
+    <StackPanel
+        Margin="15">
+        
+        <ComboBox x:Name="account"
+                  SelectionChanged="account_SelectionChanged"
+                  HorizontalAlignment="Left">
+                      
+        </ComboBox>
+    </StackPanel>
 </Window>
