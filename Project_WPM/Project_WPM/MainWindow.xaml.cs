@@ -20,10 +20,32 @@ namespace Project_WPM
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
+            MediaElement me = new MediaElement();
+           
+            me.Source = new Uri("C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3", UriKind.Absolute);
+            me.LoadedBehavior = MediaState.Manual;
+            me.Play();
+
         }
 
+       
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+
+            character_choose sub = new character_choose();
+            sub.Show();
+            main.Hide();
+        }
+
+     
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

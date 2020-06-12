@@ -28,3 +28,21 @@ C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\De
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.Properties.Resources.resources
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.GenerateResource.cache
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\bin\Debug\Project_WPM.exe.config
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\bin\Debug\Project_WPM.exe
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\bin\Debug\Project_WPM.pdb
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csprojAssemblyReference.cache
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\App.g.cs
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM_MarkupCompile.cache
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM_MarkupCompile.lref
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.g.resources
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.Properties.Resources.resources
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.GenerateResource.cache
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.exe
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM.pdb
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\Project_WPM_Content.g.cs
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\character_choose.g.cs
+C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\obj\Debug\character_choose.baml

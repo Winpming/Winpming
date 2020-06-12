@@ -5,19 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" Height="400" Width="700">
+    
     <Grid>
+        
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/Resources/mainbackground.png" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush Stretch="Fill" ImageSource="/Resources/background/background_headphone.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
         <StackPanel x:Name="mainStackPanel"
         Margin="15">
             <ComboBox x:Name="account"
                   HorizontalAlignment="Left">
             </ComboBox>
-            <StackPanel Orientation="Horizontal" Margin="150,310,0,0">
-                <Button Content="계정생성" Margin="0,0,100,0" Width="130" Height="50" Background ="SeaGreen"/>
-                <Button Content="시작하기" Width="130" Height="50" Background="SeaGreen"/>
+            <Grid Height="142" Margin="0,0,0.2,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="114*"/>
+                    <ColumnDefinition Width="107*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Resources/background/text_main.png" AlignmentY="Top" AlignmentX="Center"/>
+                </Grid.Background>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="130,90,0,0">
+                <MediaElement Source="C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3"/>
+                <Button x:Name="start" 
+                    Content="시작하기" Margin="0,0,100,0" Width="130" Height="50" Background ="SeaGreen"
+                        Click="start_Click"/>
+                <Button x:Name="close" 
+                    Content="종료하기" Width="130" Height="50" Background="PaleTurquoise"
+                        Click="close_Click"/>
             </StackPanel>
     </StackPanel>
     </Grid>
