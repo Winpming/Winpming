@@ -28,19 +28,17 @@ namespace Project_WPM
            
             me.Source = new Uri("C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3", UriKind.Absolute);
             me.LoadedBehavior = MediaState.Manual;
-            me.Play();
+            //me.Play();
 
         }
-
-       
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
-
-            character_choose sub = new character_choose();
+            subwindow1 sub = new subwindow1();
+            //this.Visibility = Visibility.Hidden;
             sub.Show();
-            main.Hide();
         }
+       
 
      
         private void close_Click(object sender, RoutedEventArgs e)

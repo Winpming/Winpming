@@ -5,37 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="700">
-    
+        Title="MainWindow" Height="700" Width="1000">
+
     <Grid>
-        
+
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/Resources/background/background_headphone.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush  ImageSource="/Resources/background/background_main.jpg" AlignmentY="Top" AlignmentX="Center"/>
         </Grid.Background>
-        <StackPanel x:Name="mainStackPanel"
-        Margin="15">
-            <ComboBox x:Name="account"
-                  HorizontalAlignment="Left">
-            </ComboBox>
-            <Grid Height="142" Margin="0,0,0.2,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="114*"/>
-                    <ColumnDefinition Width="107*"/>
-                </Grid.ColumnDefinitions>
+        <StackPanel x:Name="mainStackPanel" Margin="15" >
+
+            <Grid Height="450" Margin="10,0,0.2,0">
+                
                 <Grid.Background>
                     <ImageBrush Stretch="Fill" ImageSource="/Resources/background/text_main.png" AlignmentY="Top" AlignmentX="Center"/>
                 </Grid.Background>
             </Grid>
 
-            <StackPanel Orientation="Horizontal" Margin="130,90,0,0">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Height="100">
                 <MediaElement Source="C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3"/>
-                <Button x:Name="start" 
-                    Content="시작하기" Margin="0,0,100,0" Width="130" Height="50" Background ="SeaGreen"
-                        Click="start_Click"/>
-                <Button x:Name="close" 
-                    Content="종료하기" Width="130" Height="50" Background="PaleTurquoise"
-                        Click="close_Click"/>
+                <Button x:Name="start" Width="297" Click="start_Click" Opacity="1" Margin="0,0,0,-24">
+                    <Image Name="btn_start" Source="start_btn.png" Stretch="None" Width="297" Height="124" />
+                </Button>
             </StackPanel>
-    </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace Project_WPM
 {
     /// <summary>
-    /// character_choose.xaml에 대한 상호 작용 논리
+    /// subwindow2.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class character_choose : Window
+    public partial class subwindow2 : Window
     {
-        public character_choose()
+        public subwindow2()
         {
             InitializeComponent();
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_stop_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
