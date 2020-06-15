@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug1\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -56,10 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="character_choose.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="subwindow1.xaml.cs">
+      <DependentUpon>subwindow1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="subwindow2.xaml.cs">
+      <DependentUpon>subwindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="subwindow3.xaml.cs">
+      <DependentUpon>subwindow3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="subwindow4.xaml.cs">
+      <DependentUpon>subwindow4.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,13 +76,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="character_choose.xaml.cs">
-      <DependentUpon>character_choose.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="subwindow1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="subwindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="subwindow3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="subwindow4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -103,22 +124,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\background\mainbackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\background\background_rainbow.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\background\background_main.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\background\background_headphone.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background\text_main.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="start_btn.png" />
+    <Resource Include="Resources\background\start_btn.png" />
+    <Resource Include="Resources\background\text_one.png" />
+    <Resource Include="Resources\background\background_cake.jpg" />
     <Content Include="Resources\music\music_main.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

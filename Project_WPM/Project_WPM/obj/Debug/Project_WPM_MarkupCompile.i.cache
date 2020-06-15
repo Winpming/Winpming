@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\user\Documents\대학교\2020 1학기\윈도우즈 프로그래밍\C_sharp project\Winpming\Project_WPM\Project_WPM\App.xaml
-2282563605
+52117584853
 1582342511
-7-1150026492
+101142449894
 141183416626
-character_choose.xaml;MainWindow.xaml;
+MainWindow.xaml;subwindow1.xaml;subwindow2.xaml;subwindow3.xaml;subwindow4.xaml;
 
-True
+False
 
