@@ -24,12 +24,11 @@ namespace Project_WPM
         public MainWindow()
         {
             InitializeComponent();
-            MediaElement me = new MediaElement();
+            //MediaElement me = new MediaElement();
            
-            me.Source = new Uri("C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3", UriKind.Absolute);
-            me.LoadedBehavior = MediaState.Manual;
-            //me.Play();
-
+            //me.Source = new Uri("/./Resources/music/music_main.mp3", UriKind.Absolute);
+            music.LoadedBehavior = MediaState.Manual;
+            music.Play();
         }
 
         private void start_Click(object sender, RoutedEventArgs e)

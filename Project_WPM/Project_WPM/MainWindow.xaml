@@ -8,25 +8,36 @@
         Title="MainWindow" Height="700" Width="1000">
 
     <Grid>
-
         <Grid.Background>
-            <ImageBrush  ImageSource="/Resources/background/background_main.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            <ImageBrush  ImageSource="/Resources/background/background_main.jpg" 
+                         AlignmentY="Top" 
+                         AlignmentX="Center"/>
         </Grid.Background>
-        <StackPanel x:Name="mainStackPanel" Margin="15" >
-
-            <Grid Height="450" Margin="10,0,0.2,0">
-                
+        <StackPanel x:Name="mainStackPanel" 
+                    Margin="15" >
+            <Grid Height="450" 
+                  Margin="10,0,0.2,0">
                 <Grid.Background>
-                    <ImageBrush Stretch="Fill" ImageSource="/Resources/background/text_main.png" AlignmentY="Top" AlignmentX="Center"/>
+                    <ImageBrush Stretch="Fill"
+                                ImageSource="/Resources/background/text_main.png"
+                                AlignmentY="Top" 
+                                AlignmentX="Center"/>
                 </Grid.Background>
             </Grid>
-
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         Height="100">
-                <MediaElement Source="C:/Users/user/Desktop/윈도우즈 사진/music_main.mp3"/>
-                <Button x:Name="start" Width="297" Click="start_Click" Opacity="1" Margin="0,0,0,-24">
-                    <Image Name="btn_start" Source="start_btn.png" Stretch="None" Width="297" Height="124" />
+                <MediaElement Source="/Resources/music/music_main.mp3"
+                              x:Name="music"/>
+                <Button x:Name="startBtn" 
+                        Width="297" 
+                        Click="start_Click" 
+                        Opacity="1" 
+                        Margin="0,0,0,-24"
+                        Style="{StaticResource RoundButtonTemplate}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/background/start_btn.png"/>
+                    </Button.Background>
                 </Button>
             </StackPanel>
         </StackPanel>
