@@ -3,116 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sd="clr-namespace:Project_WPM.classes"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
-        Title="subwindow2" Height="700" Width="1000">
-    <StackPanel Orientation="Horizontal">
-        <Grid Margin="20" Width="700 " >
-            <Grid.RowDefinitions>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="175.2"/>
-                <ColumnDefinition Width="175*"/>
-                <ColumnDefinition Width="175*"/>
-                <ColumnDefinition Width="174*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="zero_zero" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="zero_one" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="1"
-                Margin="3"/>
-
-            <Button x:Name="zero_two" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="2"
-                Margin="3"/>
-
-            <Button x:Name="zero_three" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="3"
-                Margin="3"/>
-
-            <Button x:Name="one_zero" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="3"/>
-
-            <Button x:Name="one_one" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="3"/>
-
-            <Button x:Name="one_two" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="2"
-                Margin="3"/>
-
-            <Button x:Name="one_three" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="3"
-                Margin="3"/>
-
-            <Button x:Name="two_zero" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="3"/>
-
-            <Button x:Name="two_one" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="two_two" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="two_three" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="three_zero" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="three_one" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="three_two" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="three_three" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="3"
-                Margin="3"/>
-
-
-
-        </Grid>
+        Title="subwindow2" Height="700" Width="1000"
+        x:Name="mywindow2">
+    
+    <Window.Resources>
+        <sd:Timer x:Key="TIMER"/>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Horizontal"
+                DataContext="{StaticResource TIMER}">
+        <!--Timer클래스 객체를 바인딩을 하기위해 부모에서 DataContext설정 -->
+        <UniformGrid Margin="20" Width="700 " 
+                     x:Name="gameBoard" >
+        </UniformGrid>
 
         <StackPanel Orientation="Vertical" Margin="0,20,20,20.4" Width="238">
             <Label Content="Easy Mode"
@@ -123,20 +29,9 @@
                         HorizontalAlignment="Center"
                         Margin="10"
                         Background="Beige">
-                <Label Content="score :"
-                       FontSize="30"/>
-                <Label Content="000"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="Beige">
                 <Label Content="남은카드 :"
                        FontSize="25"/>
-                <Label Content="00"
+                <Label Content ="{Binding ElementName=mywindow2, Path=Matched}"
                        Margin="2"
                        Background="White"
                        FontSize="30"/>
@@ -149,7 +44,7 @@
                 <Label Content="Timer :"
                        Foreground="White"
                        FontSize="30"/>
-                <Label Content="00000"
+                <Label Content="{Binding Path=Count, Mode=OneWay}"
                        Margin="2"
                        Background="White"
                        FontSize="30"/>
