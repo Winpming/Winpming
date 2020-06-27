@@ -27,7 +27,7 @@
                 <Label Content="남은카드"
                            FontSize="25"/>
             </StackPanel>
-            <Label  Content ="{Binding Matched, ElementName=mywindow3}"
+            <Label  Content ="{Binding Matched, ElementName=mywindow4}"
                           HorizontalContentAlignment="Center"
                           
                            Background="White"

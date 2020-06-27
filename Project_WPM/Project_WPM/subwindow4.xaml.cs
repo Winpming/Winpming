@@ -162,6 +162,13 @@ namespace Project_WPM
                         btnSet();
                         Matched = "64";
                     }
+                    else
+                    {
+                        subwindow1 sub1 = new subwindow1();
+                        sub1.Show();
+                        tmr.Stop();
+                        this.Close();
+                    }
                 }
             }
             // 매치가 안되었을 때
