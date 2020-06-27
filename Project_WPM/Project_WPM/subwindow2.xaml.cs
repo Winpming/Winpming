@@ -1,5 +1,4 @@
-﻿using Project_WPM.classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -27,8 +26,7 @@ namespace Project_WPM
     {
         Button first;
         Button second;
-
-        Timer myTimer;
+        private string count = "10";
         bool isStop = false;
 
         private string matched;
@@ -45,14 +43,64 @@ namespace Project_WPM
             }
         }
 
+        public string Count
+        {
+            get
+            {
+                return count;
+            }
+            set
+            {
+                count = value;
+                OnPropertyChanged("Count");
+                if (Int32.Parse(count) <= 0)
+                {
+                    tmr.Stop();
+                    MessageBoxResult res = MessageBox.Show(
+                         "실패!! 다시 하시겠습니까?", "Success", MessageBoxButton.YesNo);
+                    if (res == MessageBoxResult.Yes)
+                    {
+                        resetRnd();
+                        boardReset();
+                        btnSet();
+                        Matched = "16";
+
+                        first = null;
+                        second = null;
+                        count = 10.ToString();
+                        tmr.Start();
+                    }
+                    else
+                    {
+                        subwindow1 sub1 = new subwindow1();
+                        sub1.Show();
+                        this.Close();
+                        tmr.Stop();
+                    }
+
+                }
+            }
+        }
+
+        System.Windows.Threading.DispatcherTimer tmr = new System.Windows.Threading.DispatcherTimer();
+
+
         public subwindow2()
         {
             InitializeComponent();
             btnSet();               //버튼을 세팅하는 메소드
-            myTimer = this.Resources["TIMER"] as Timer;
-            myTimer.setTime(10);
-            myTimer.start();
+            tmr.Interval = new TimeSpan(0, 0, 1);
+            tmr.Tick += new EventHandler(tmr_Tick);
+            this.DataContext = this;
+            tmr.Start();
         }
+
+        void tmr_Tick(object sender, EventArgs e)
+        {
+            Count = (Int32.Parse(count) - 1).ToString();
+            label1.Content = Count;
+        }
+
         private void btnSet()
         {
             Matched = "16";
@@ -61,9 +109,9 @@ namespace Project_WPM
             {
                 Button btn = new Button();
                 btn.Background = Brushes.White;
-                btn.Margin = new Thickness(10);
+                btn.Margin = new Thickness(5);
                 btn.Tag = TagSet();         //맞는 그림을 선택했는지 확인하기 위한 Tag를 설정하는 메소드
-                btn.Content = MakeImage("/Resources/Images/"+btn.Tag+".png");
+                btn.Content = MakeImage("/Resources/Images/" + btn.Tag + ".png");
                 btn.Click += btn_Click;
                 gameBoard.Children.Add(btn);
             }
@@ -100,11 +148,11 @@ namespace Project_WPM
                 first = null;
                 second = null;
 
-                Matched = (Int32.Parse(Matched)-2).ToString();   //맞춘 회수를 증가
+                Matched = (Int32.Parse(Matched) - 2).ToString();   //맞춘 회수를 증가
 
                 if (Int32.Parse(Matched) <= 0)
                 {
-                    myTimer.stop();
+                    tmr.Stop();
                     MessageBoxResult res = MessageBox.Show(
                          "성공! 다시 하시겠습니까?", "Success", MessageBoxButton.YesNo);
                     if (res == MessageBoxResult.Yes)
@@ -151,7 +199,7 @@ namespace Project_WPM
             bit.EndInit();
 
             Image myImage = new Image();
-            myImage.Margin = new Thickness(10);
+            myImage.Margin = new Thickness(5);
             myImage.Stretch = Stretch.Fill;
             myImage.Source = bit;
 
@@ -189,16 +237,18 @@ namespace Project_WPM
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-
+            subwindow1 sub1 = new subwindow1();
+            sub1.Show();
+            this.Close();
+            tmr.Stop();
         }
 
         private void btn_stop_Click(object sender, RoutedEventArgs e)
         {
-            Timer t = this.Resources["TIMER"] as Timer;
-            if(isStop == false)
+            if (isStop == false)
             {
-                t.stop();
-                for(int i = 0; i < 16; i++)
+                tmr.Stop();
+                for (int i = 0; i < 16; i++)
                 {
                     Button btn = gameBoard.Children[i] as Button;
                     btn.IsEnabled = false;
@@ -207,7 +257,7 @@ namespace Project_WPM
             }
             else
             {
-                t.start();
+                tmr.Start();
                 for (int i = 0; i < 16; i++)
                 {
                     Button btn = gameBoard.Children[i] as Button;
@@ -217,4 +267,6 @@ namespace Project_WPM
             }
         }
     }
+
+
 }

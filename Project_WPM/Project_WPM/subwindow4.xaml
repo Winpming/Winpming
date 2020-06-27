@@ -5,427 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
-        Title="subwindow4" Height="700" Width="1000 ">
-    <StackPanel Orientation="Horizontal">
-        <Grid Margin="20" Width="700 " >
-            <Grid.RowDefinitions>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
-                <RowDefinition Height= "*"/>
+        Title="subwindow4" Height="700" Width="1000"
+        x:Name="mywindow4">
 
+    <StackPanel Orientation="Horizontal"
+                    Margin="0,20,10,40">
 
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Button x:Name="zero_zero" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="zero_one" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="1"
-                Margin="3"/>
-
-            <Button x:Name="zero_two" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="2"
-                Margin="3"/>
-
-            <Button x:Name="zero_three" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="zero_four" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="zero_five" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="zero_six" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="zero_seven" 
-                Content=""
-                Grid.Row="0"
-                Grid.Column="7"
-                Margin="3"/>
-
-            <Button x:Name="one_zero" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="0"
-                Margin="3"/>
-
-            <Button x:Name="one_one" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="1"
-                Margin="3"/>
-
-            <Button x:Name="one_two" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="2"
-                Margin="3"/>
-
-            <Button x:Name="one_three" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="one_four" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="one_five" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="one_six" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="one_seven" 
-                Content=""
-                Grid.Row="1"
-                Grid.Column="7"
-                Margin="3"/>
-
-            <Button x:Name="two_zero" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="0"
-                Margin="3"/>
-
-            <Button x:Name="two_one" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="two_two" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="two_three" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="two_four" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="two_five" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="two_six" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="two_seven" 
-                Content=""
-                Grid.Row="2"
-                Grid.Column="7"
-                Margin="3"/>
-            <Button x:Name="three_zero" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="three_one" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="three_two" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="three_three" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="three_four" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="three_five" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="three_six" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="three_seven" 
-                Content=""
-                Grid.Row="3"
-                Grid.Column="7"
-                Margin="3"/>
-            <Button x:Name="four_zero" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="four_one" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="four_two" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="four_three" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="four_four" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="four_five" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="four_six" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="four_seven" 
-                Content=""
-                Grid.Row="4"
-                Grid.Column="7"
-                Margin="3"/>
-            <Button x:Name="five_zero" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="five_one" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="five_two" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="five_three" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="five_four" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="five_five" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="5"
-                Margin="3"/>
-
-            <Button x:Name="five_six" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="6"
-                Margin="3"/>
-
-            <Button x:Name="five_seven" 
-                Content=""
-                Grid.Row="5"
-                Grid.Column="7"
-                Margin="3"/>
-
-            <Button x:Name="six_zero" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="six_one" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="1"
-                Margin="3"/>
-
-            <Button x:Name="six_two" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="2"
-                Margin="3"/>
-
-            <Button x:Name="six_three" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="3"
-                Margin="3"/>
-
-            <Button x:Name="six_four" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="4"
-                Margin="3"/>
-
-            <Button x:Name="six_five" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="5"
-                Margin="3"/>
-
-            <Button x:Name="six_six" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="6"
-                Margin="3"/>
-
-            <Button x:Name="six_seven" 
-                Content=""
-                Grid.Row="6"
-                Grid.Column="7"
-                Margin="3"/>
-
-            <Button x:Name="seven_zero" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="0"
-                Margin="3"/>
-            <Button x:Name="seven_one" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="1"
-                Margin="3"/>
-            <Button x:Name="seven_two" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="2"
-                Margin="3"/>
-            <Button x:Name="seven_three" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="3"
-                Margin="3"/>
-            <Button x:Name="seven_four" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="4"
-                Margin="3"/>
-            <Button x:Name="seven_five" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="5"
-                Margin="3"/>
-            <Button x:Name="seven_six" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="6"
-                Margin="3"/>
-            <Button x:Name="seven_seven" 
-                Content=""
-                Grid.Row="7"
-                Grid.Column="7"
-                Margin="3"/>
-
-
-
-        </Grid>
+        <UniformGrid Margin="20,0,20,0.4" Width="700 " 
+                         x:Name="gameBoard" />
 
         <StackPanel Orientation="Vertical" Margin="0,20,20,20.4" Width="238">
-            <Label Content="Normal Mode"
-                   HorizontalContentAlignment="Center"
-                   Margin="0,0,0,30"
-                   FontSize="30"/>
+
+            <Label Content="Hard Mode"
+                       HorizontalContentAlignment="Center"
+                       Margin="0,0,0,30"
+                       FontSize="30"/>
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="Beige">
-                <Label Content="score :"
-                       FontSize="30"/>
-                <Label Content="000"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
+                            HorizontalAlignment="Center"
+                            Margin="10"
+                            Background="Beige">
+                <Label Content="남은카드"
+                           FontSize="25"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="Beige">
-                <Label Content="남은카드 :"
-                       FontSize="25"/>
-                <Label Content="00"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="OrangeRed"
-                        >
-                <Label Content="Timer :"
-                       Foreground="White"
-                       FontSize="30"/>
-                <Label Content="00000"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
-            </StackPanel>
-            <Button x:Name="btn_setting"
-                    Content="일시정지"
-                    Width="120"
-                    Height="60"
-                    Margin="10,100,10,0"
-                    FontSize="20"/>
+            <Label  Content ="{Binding Matched, ElementName=mywindow3}"
+                          HorizontalContentAlignment="Center"
+                          
+                           Background="White"
+                           FontSize="30"/>
+
+            <Button x:Name="btn_stop"
+                        Content="일시정지"
+                        Width="120"
+                        Height="40"
+                        Margin="10,100,10,0"
+                        FontSize="20"
+                        Click="btn_stop_Click"/>
             <Button x:Name="btn_exit"
-                    Content="나가기"
-                    Width="120"
-                    Height="60"
-                    Margin="10,10,10,0"
-                    FontSize="20"/>
+                        Content="나가기"
+                        Width="120"
+                        Height="40"
+                        Margin="10,10,10,0"
+                        FontSize="20"
+                        Click="btn_exit_Click"/>
+            <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="10,50,10,10"
+                            Background="OrangeRed"
+                            >
+                <Label Content="Timer :"
+                           Foreground="White"
+                           FontSize="30"/>
+                <Label      x:Name="label1"
+                            Content="{Binding Path = Count, Mode=OneWay}"
+                           Margin="2"
+                           Background="White"
+                           FontSize="30"/>
+            </StackPanel>
+            <ProgressBar x:Name="progressbar"
+                     Minimum="0"
+                     Maximum="50"
+                     Height="30"
+                    Margin="10,10,10,10"
+                     Value="{Binding Path = Count}" HorizontalAlignment="Right" Width="218"
+                     />
         </StackPanel>
     </StackPanel>
+
+
 </Window>
