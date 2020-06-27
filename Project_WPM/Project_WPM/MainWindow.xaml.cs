@@ -34,15 +34,8 @@ namespace Project_WPM
         private void start_Click(object sender, RoutedEventArgs e)
         {
             subwindow1 sub = new subwindow1();
-            //this.Visibility = Visibility.Hidden;
             sub.Show();
-        }
-       
-
-     
-        private void close_Click(object sender, RoutedEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

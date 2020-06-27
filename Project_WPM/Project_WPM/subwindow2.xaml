@@ -3,66 +3,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:sd="clr-namespace:Project_WPM.classes"
         xmlns:local="clr-namespace:Project_WPM"
         mc:Ignorable="d"
         Title="subwindow2" Height="700" Width="1000"
         x:Name="mywindow2">
-    
-    <Window.Resources>
-        <sd:Timer x:Key="TIMER"/>
-    </Window.Resources>
-    
+
     <StackPanel Orientation="Horizontal"
-                DataContext="{StaticResource TIMER}">
-        <!--Timer클래스 객체를 바인딩을 하기위해 부모에서 DataContext설정 -->
-        <UniformGrid Margin="20" Width="700 " 
-                     x:Name="gameBoard" >
-        </UniformGrid>
+                    Margin="0,20,10,40">
+
+        <UniformGrid Margin="20,0,20,0.4" Width="700 " 
+                         x:Name="gameBoard" />
 
         <StackPanel Orientation="Vertical" Margin="0,20,20,20.4" Width="238">
+
             <Label Content="Easy Mode"
-                   HorizontalContentAlignment="Center"
-                   Margin="0,0,0,30"
-                   FontSize="30"/>
+                       HorizontalContentAlignment="Center"
+                       Margin="0,0,0,30"
+                       FontSize="30"/>
             <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="Beige">
-                <Label Content="남은카드 :"
-                       FontSize="25"/>
-                <Label Content ="{Binding ElementName=mywindow2, Path=Matched}"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
+                            HorizontalAlignment="Center"
+                            Margin="10"
+                            Background="Beige">
+                <Label Content="남은카드"
+                           FontSize="25"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal"
-                        HorizontalAlignment="Center"
-                        Margin="10"
-                        Background="OrangeRed"
-                        >
-                <Label Content="Timer :"
-                       Foreground="White"
-                       FontSize="30"/>
-                <Label Content="{Binding Path=Count, Mode=OneWay}"
-                       Margin="2"
-                       Background="White"
-                       FontSize="30"/>
-            </StackPanel>
+            <Label  Content ="{Binding Matched, ElementName=mywindow2}"
+                          HorizontalContentAlignment="Center"
+                          
+                           Background="White"
+                           FontSize="30"/>
+
             <Button x:Name="btn_stop"
-                    Content="일시정지"
-                    Width="120"
-                    Height="60"
-                    Margin="10,100,10,0"
-                    FontSize="20"
-                    Click="btn_stop_Click"/>
+                        Content="일시정지"
+                        Width="120"
+                        Height="40"
+                        Margin="10,100,10,0"
+                        FontSize="20"
+                        Click="btn_stop_Click"/>
             <Button x:Name="btn_exit"
-                    Content="나가기"
-                    Width="120"
-                    Height="60"
-                    Margin="10,10,10,0"
-                    FontSize="20"
-                    Click="btn_exit_Click"/>
+                        Content="나가기"
+                        Width="120"
+                        Height="40"
+                        Margin="10,10,10,0"
+                        FontSize="20"
+                        Click="btn_exit_Click"/>
+            <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="10,50,10,10"
+                            Background="OrangeRed"
+                            >
+                <Label Content="Timer :"
+                           Foreground="White"
+                           FontSize="30"/>
+                <Label      x:Name="label1"
+                            Content="{Binding Path = Count, Mode=OneWay}"
+                           Margin="2"
+                           Background="White"
+                           FontSize="30"/>
+            </StackPanel>
+            <ProgressBar x:Name="progressbar"
+                     Minimum="0"
+                     Maximum="10"
+                     Height="30"
+                    Margin="10,10,10,10"
+                     Value="{Binding Path = Count}" HorizontalAlignment="Right" Width="218"
+                     />
         </StackPanel>
     </StackPanel>
+
+
 </Window>

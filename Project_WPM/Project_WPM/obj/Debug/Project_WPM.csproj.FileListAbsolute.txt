@@ -68,4 +68,3 @@ C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\De
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\subwindow3.baml
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\subwindow4.baml
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\App.baml
-C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\obj\Debug\GeneratedInternalTypeHelper.g.cs

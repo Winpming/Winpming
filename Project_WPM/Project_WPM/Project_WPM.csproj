@@ -56,7 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="classes\Timer.cs" />
     <Compile Include="subwindow1.xaml.cs">
       <DependentUpon>subwindow1.xaml</DependentUpon>
     </Compile>
