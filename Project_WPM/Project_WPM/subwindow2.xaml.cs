@@ -57,7 +57,7 @@ namespace Project_WPM
                 {
                     tmr.Stop();
                     MessageBoxResult res = MessageBox.Show(
-                         "실패!! 다시 하시겠습니까?", "Success", MessageBoxButton.YesNo);
+                         "실패!! 다시 하시겠습니까?", "Fail", MessageBoxButton.YesNo);
                     if (res == MessageBoxResult.Yes)
                     {
                         resetRnd();
@@ -161,6 +161,13 @@ namespace Project_WPM
                         boardReset();
                         btnSet();
                         Matched = "16";
+                    }
+                    else
+                    {
+                        subwindow1 sub1 = new subwindow1();
+                        sub1.Show();
+                        tmr.Stop();
+                        this.Close();
                     }
                 }
             }
