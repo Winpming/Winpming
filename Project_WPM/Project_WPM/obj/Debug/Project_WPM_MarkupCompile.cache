@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\은솔(수업)\윈프기\프로젝트\Winpming\Project_WPM\Project_WPM\App.xaml
-52117584853
+5-117239694
 1582342511
-9-181331982
+9161924335
 141183416626
-MainWindow.xaml;subwindow1.xaml;subwindow2.xaml;subwindow3.xaml;subwindow4.xaml;
+StartWindow.xaml;MenuWindow.xaml;EasyWindow.xaml;NormalWindow.xaml;HardWindow.xaml;
 
 False
 
