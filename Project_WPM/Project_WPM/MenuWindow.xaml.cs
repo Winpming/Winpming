@@ -17,42 +17,42 @@ namespace Project_WPM
     /// <summary>
     /// subwindow1.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class subwindow1 : Window
+    public partial class MenuWindow : Window
     {
-        public subwindow1()
+        public MenuWindow()
         {
             InitializeComponent();
         }
         private void btn_easy_Click(object sender, RoutedEventArgs e)
+            //easy 모드 게임 창을 띄운다
         {
-            subwindow1 sub1 = new subwindow1();
-            subwindow2 sub2 = new subwindow2();
-            sub2.Show();
+            EasyWindow easy = new EasyWindow();
+            easy.Show();
             this.Close();
-
         }
 
         private void btn_normal_Click(object sender, RoutedEventArgs e)
+            //normal 모드 창을 띄운다
         {
-            subwindow1 sub1 = new subwindow1();
-            subwindow3 sub3 = new subwindow3();
-            sub3.Show();
+            NormalWindow normal = new NormalWindow();
+            normal.Show();
             this.Close();
         }
 
         private void btn_hard_Click(object sender, RoutedEventArgs e)
+            //hard 모드 창을 띄운다
         {
-            subwindow1 sub1 = new subwindow1();
-            subwindow4 sub4 = new subwindow4();
-            sub4.Show();
+            HardWindow hard = new HardWindow();
+            hard.Show();
             this.Close();
         }
 
         private void btn_back_Click(object sender, RoutedEventArgs e)
+            //뒤로가기 버튼. startWindow를 띄운다.
         {
-            MainWindow main = new MainWindow();
+            StartWindow start = new StartWindow();
+            start.Show();
             this.Close();
-            main.Show();
         }
 
 

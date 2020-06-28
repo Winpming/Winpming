@@ -22,15 +22,14 @@ namespace Project_WPM
     /// <summary>
     /// subwindow2.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class subwindow2 : Window, INotifyPropertyChanged
+    public partial class NormalWindow : Window, INotifyPropertyChanged  //Normal 모드. 전체적으로 Easy모드와 동일하게 작동한다.
     {
         Button first;
         Button second;
-        private string count = "10";
         bool isStop = false;
 
         private string matched;
-        public string Matched      // 남은 카드개수를 데이터 바인딩 하기 위한 Property
+        public string Matched
         {
             get
             {
@@ -43,6 +42,7 @@ namespace Project_WPM
             }
         }
 
+        private string count = "20";        //Normal모드 시간 제한은 20초
         public string Count
         {
             get
@@ -57,25 +57,24 @@ namespace Project_WPM
                 {
                     tmr.Stop();
                     MessageBoxResult res = MessageBox.Show(
-                         "실패!! 다시 하시겠습니까?", "Fail", MessageBoxButton.YesNo);
+                         "실패!! 다시 하시겠습니까?", "Success", MessageBoxButton.YesNo);
                     if (res == MessageBoxResult.Yes)
                     {
                         resetRnd();
                         boardReset();
                         btnSet();
-                        Matched = "16";
+                        Matched = "36";
 
                         first = null;
                         second = null;
-                        count = 10.ToString();
+                        count = 20.ToString();
                         tmr.Start();
                     }
                     else
                     {
-                        subwindow1 sub1 = new subwindow1();
-                        sub1.Show();
+                        MenuWindow menu = new MenuWindow();
+                        menu.Show();
                         this.Close();
-                        tmr.Stop();
                     }
 
                 }
@@ -84,11 +83,10 @@ namespace Project_WPM
 
         System.Windows.Threading.DispatcherTimer tmr = new System.Windows.Threading.DispatcherTimer();
 
-
-        public subwindow2()
+        public NormalWindow()
         {
             InitializeComponent();
-            btnSet();               //버튼을 세팅하는 메소드
+            btnSet();
             tmr.Interval = new TimeSpan(0, 0, 1);
             tmr.Tick += new EventHandler(tmr_Tick);
             this.DataContext = this;
@@ -97,48 +95,65 @@ namespace Project_WPM
 
         void tmr_Tick(object sender, EventArgs e)
         {
-            Count = (Int32.Parse(count) - 1).ToString();
+            Count = (Int32.Parse(Count) - 1).ToString();
             label1.Content = Count;
         }
 
         private void btnSet()
         {
-            Matched = "16";
+            Matched = "36";         //Normal모드는 맞춰야 하는 카드 갯수가 36(6*6)개이다.
 
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 36; i++)    //36개의 버튼을 세팅
             {
                 Button btn = new Button();
                 btn.Background = Brushes.White;
                 btn.Margin = new Thickness(5);
-                btn.Tag = TagSet();         //맞는 그림을 선택했는지 확인하기 위한 Tag를 설정하는 메소드
+                btn.Tag = TagSet();       
                 btn.Content = MakeImage("/Resources/Images/" + btn.Tag + ".png");
                 btn.Click += btn_Click;
                 gameBoard.Children.Add(btn);
             }
         }
 
-        private void btn_Click(object sender, RoutedEventArgs e)        //버튼 클릭시 이벤트
+        int[] randint = new int[36];
+
+        private int TagSet()    // 0~17사이 정수를 만들어 리턴하는 함수. 중복되지 않도록 한쌍에 2개씩 숫자를 랜덤으로 생성한다.
+        {                       // 0~35사이의 랜덤값이 중복되지 않게 만들어지고 이를 18로 나눈 나머지값을 리턴
+            int i;
+            Random rand = new Random();
+            while (true)
+            {
+                i = rand.Next(36); 
+                if (randint[i] == 0)
+                {
+                    randint[i] = 1;
+                    break;
+                }
+            }
+            return i % 18; // 태그는 0~17까지, 18개의 그림을 표시
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e) 
         {
             Button btn = sender as Button;
 
-            if (first == null)         // 첫번째 버튼이 아직 눌러지지 않았으면 눌린 버튼을첫번째 버튼으로 설정
+            if (first == null) 
             {
                 first = btn;
                 btn.Opacity = 0.5;
                 btn.IsEnabled = false;
                 return;
             }
-            else if (second == null)   // 첫번째 버튼이 눌렸고 두번째 버튼이 아직 눌려지지 않았을때 두번째 버튼을 누르면 두번째 버튼으로 설정 
+            else if (second == null)  
             {
                 second = btn;
                 btn.Opacity = 0.5;
                 btn.IsEnabled = false;
             }
-            else   // 이미 두개의 버튼이 열렸는데 3번째 버튼을 눌렀을 경우, 아무 일 안하고 리턴
+            else 
                 return;
 
-            // 매치가 되었을 때
-            if ((int)first.Tag == (int)second.Tag)  // 버튼의 Tag Property가 같다면
+            if ((int)first.Tag == (int)second.Tag) 
             {
                 Button btn1 = first;
                 Button btn2 = second;
@@ -148,7 +163,7 @@ namespace Project_WPM
                 first = null;
                 second = null;
 
-                Matched = (Int32.Parse(Matched) - 2).ToString();   //맞춘 회수를 증가
+                Matched = (Int32.Parse(Matched) - 2).ToString(); 
 
                 if (Int32.Parse(Matched) <= 0)
                 {
@@ -160,18 +175,22 @@ namespace Project_WPM
                         resetRnd();
                         boardReset();
                         btnSet();
-                        Matched = "16";
+                        Matched = "36";
+
+                        first = null;
+                        second = null;
+                        Count = 20.ToString();
+                        tmr.Start();
                     }
                     else
                     {
-                        subwindow1 sub1 = new subwindow1();
-                        sub1.Show();
-                        tmr.Stop();
+                        MenuWindow menu = new MenuWindow();
+                        menu.Show();
                         this.Close();
                     }
                 }
             }
-            // 매치가 안되었을 때
+
             else
             {
                 Button btn1 = first;
@@ -186,19 +205,18 @@ namespace Project_WPM
             }
         }
 
-        // 게임 재시작시 초기화
-        private void boardReset()           //버튼 
+        private void boardReset()    
         {
             gameBoard.Children.Clear();
         }
 
-        private void resetRnd()             // rnd[] 배열 초기화
+        private void resetRnd()       
         {
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 36; i++)
                 randint[i] = 0;
         }
 
-        private Image MakeImage(string r)   //파일을 불러서 버튼 이미지를 설정
+        private Image MakeImage(string r) 
         {
             BitmapImage bit = new BitmapImage();
             bit.BeginInit();
@@ -213,25 +231,6 @@ namespace Project_WPM
             return myImage;
         }
 
-        int[] randint = new int[16];
-
-        private int TagSet()    // 0~7사이 정수를 만들어 리턴하는 함수. 중복되지 않도록 한쌍에 2개씩 숫자를 랜덤으로 생성한다.
-        {
-            int i;
-            Random rand = new Random();
-            while (true)
-            {
-                i = rand.Next(16); // 0~15까지
-                if (randint[i] == 0)
-                {
-                    randint[i] = 1;
-                    break;
-                }
-            }
-            return i % 8; // 태그는 0~7까지, 8개의 그림을 표시
-        }
-
-        //남은 카드(Matched)변수를 xaml과 데이터바인딩하기 위한 INotifyPropertyChanged인터페이스 구현
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string propertyScore)
         {
@@ -244,8 +243,8 @@ namespace Project_WPM
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            subwindow1 sub1 = new subwindow1();
-            sub1.Show();
+            MenuWindow menu = new MenuWindow();
+            menu.Show();
             this.Close();
             tmr.Stop();
         }
@@ -255,7 +254,7 @@ namespace Project_WPM
             if (isStop == false)
             {
                 tmr.Stop();
-                for (int i = 0; i < 16; i++)
+                for (int i = 0; i < 36; i++)
                 {
                     Button btn = gameBoard.Children[i] as Button;
                     btn.IsEnabled = false;
@@ -265,7 +264,7 @@ namespace Project_WPM
             else
             {
                 tmr.Start();
-                for (int i = 0; i < 16; i++)
+                for (int i = 0; i < 36; i++)
                 {
                     Button btn = gameBoard.Children[i] as Button;
                     btn.IsEnabled = true;
@@ -274,6 +273,4 @@ namespace Project_WPM
             }
         }
     }
-
-
 }
